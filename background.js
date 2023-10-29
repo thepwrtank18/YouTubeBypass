@@ -4,9 +4,11 @@ let isAndroid = false;
 var browser = browser || chrome;
 
 let platformInfo = browser.runtime.getPlatformInfo();
-if (platformInfo.os === "android") {
-    isAndroid = true;
-}
+platformInfo.then((value) => {
+    if (value.os === "android") {
+        isAndroid = true;
+    }
+});
 
 browser.webRequest.onBeforeSendHeaders.addListener(
     function (details) {
