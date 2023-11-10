@@ -17,13 +17,15 @@ platformInfo.then((value) => {
 
 browser.webRequest.onBeforeSendHeaders.addListener(
     function (details) {
+        console.log(details);
         if (!details.requestHeaders) {
             return;
         }
         for (let i = 0; i < details.requestHeaders.length; i++) {
             if (details.requestHeaders[i].name.toLowerCase() === "user-agent") { // headers are case-insensitive
                 if (remove_artifacts === true) {
-                    if (!details.url.includes("/watch")) { // this feels wrong, but it works (?)
+                    console.log(`${details.url}, ${details.originUrl}}`);
+                    if (details.originUrl) { // if the requested URL is not from an outside source (ex: the webpage itself), then set the user agent
                         details.requestHeaders[i].value = user_agent;
                     }
                 }
