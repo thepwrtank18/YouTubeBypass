@@ -1,0 +1,32 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+  </head>
+
+  <body>
+
+    <form>
+        <p>User agent profiles: </p>
+        <input type="radio" id="NT10" name="UserAgentProfile" value="Mozilla/5.0 (Windows Phone 10.0; Android 6.0.1; Xbox; Xbox One) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/58.0.3029.110 Mobile Safari/537.36 Mobile Edge/42.0.0.2028">
+        <label for="NT10">Windows Mobile 10</label><br>
+        <input type="radio" id="iOS14" name="UserAgentProfile" value="Mozilla/5.0 (iPhone; CPU iPhone OS 14_7_1 like Mac OS X) AppleWebKit/605.1.15 (KHTML, like Gecko) FxiOS/36.0  Mobile/15E148 Safari/605.1.15">
+        <label for="iOS14">iOS 14</label><br>
+        <input type="radio" id="iOS10" name="UserAgentProfile" value="Mozilla/5.0 (iPhone; CPU iPhone OS 10_3_2 like Mac OS X) AppleWebKit/603.2.4 (KHTML, like Gecko) FxiOS/7.5b3349 Mobile/14F89 Safari/603.2.4">
+        <label for="iOS10">iOS 10.3.4</label><br>
+        <input type="radio" id="Fedora" name="UserAgentProfile" value="Mozilla/5.0 (X11; Fedora; Linux x86_64) AppleWebKit/537.36 (KHTML, like Gecko) Chrome/105.0.0.0 Safari/537.36">
+        <label for="Fedora">Fedora</label><br>
+        <input type="radio" id="UseAdvanced" name="UserAgentProfile" value="unset">
+        <label for="UseAdvanced">Use custom user agent</label><br>
+        <br>
+        <input type="submit" value="Save"></button>
+    </form>
+    <br><br>
+    <label>User agent: <input type="text" id="user_agent" name="user_agent" /></label>
+
+    <p>Made with love and spite by <a href="https://github.com/thepwrtank18">TheTank20</a></p>
+
+    <p id="success" style="visibility: hidden; color: green;">Set successfully. You may need to restart your browser for changes to take effect.</p>
+    <script src="options.js"></script>
+  </body>
+</html>

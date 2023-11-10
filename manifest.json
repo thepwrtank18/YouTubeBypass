@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "YouTube Bypass",
-  "version": "1.1.1",
+  "version": "1.2",
   "author": "TheTank20",
   "description": "Bypasses YouTube's ad block ban.",
   "icons": {
@@ -16,12 +16,16 @@
     "activeTab",
     "webRequest",
     "webRequestBlocking",
+    "storage",
     "*://*.youtube.com/*"
   ],
   "background": {
     "scripts": [
       "background.js"
     ]
+  },
+  "options_ui": {
+    "page": "options.html"
   },
   "browser_specific_settings": {
     "gecko": {
