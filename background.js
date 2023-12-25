@@ -21,6 +21,9 @@ browser.webRequest.onBeforeSendHeaders.addListener(
         if (!details.requestHeaders) {
             return;
         }
+        if (details.url.startsWith("https://studio.youtube.com") || details.url.startsWith("http://studio.youtube.com")) { // fix for YouTube Studio "You are using an unsupported browser" message
+            return;
+        }
         for (let i = 0; i < details.requestHeaders.length; i++) {
             if (details.requestHeaders[i].name.toLowerCase() === "user-agent") { // headers are case-insensitive
                 if (remove_artifacts === true) {

@@ -1,7 +1,7 @@
 {
   "manifest_version": 2,
   "name": "YouTube Bypass",
-  "version": "1.2.2",
+  "version": "1.2.3",
   "author": "TheTank20",
   "description": "Bypasses YouTube's ad block ban.",
   "icons": {
